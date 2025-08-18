@@ -4,11 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>DuoVia EduTech - AI in Education</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn/bootstrap@5.3.0.jsdelivr.net/npm/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Bootstrap Icons -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
     :root {
@@ -29,7 +26,7 @@
     /* Navbar */
     .navbar {
       background-color: var(--black);
-: 2px solid var(--      border-bottomchrome-yellow);
+      border-bottom: 2px solid var(--chrome-yellow);
     }
     .navbar-nav .nav-link {
       color: var(--white) !important;
@@ -43,8 +40,8 @@
       color: var(--chrome-yellow);
       border-color: var(--chrome-yellow);
     }
-    /* Cards */
-    .carousel-item img {
+    /* Carousel */
+    #duoviaCarousel .carousel-item img {
       height: 400px;
       object-fit: cover;
       border-radius: 10px;
@@ -52,6 +49,7 @@
     h3, h5 {
       color: var(--chrome-yellow);
     }
+    /* Cards */
     .card {
       background-color: var(--grey);
       border: none;
@@ -68,51 +66,42 @@
       color: var(--white);
       border-top: 2px solid var(--chrome-yellow);
     }
-    footer h6 {
-      color: var(--chrome-yellow a {
-      color);
-    }
-    footer      text-decoration: var(--white);
-: none;
+    footer h6, footer a {
+      color: var(--chrome-yellow);
+      text-decoration: none;
     }
     footer a:hover {
-      color: var(--chrome-yellow);
+      color: var(--white);
     }
   </style>
 </head>
 <body>
 
-<!-- HEADER -->
 <header>
   <nav class="navbar navbar-expand-lg fixed-top shadow-sm" data-aos="fade-down">
     <div class="container">
-      <!-- Logo -->
       <a class="navbar-brand fw-bold" href="#">
         <img src="./assets/img/DuoVia_EduTech_logo.png" alt="DuoVia Logo" class="logo">
       </a>
 
-      <!-- Mobile toggle -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
               aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon" style="filter: invert(1)"></span>
       </button>
 
-      <!-- Nav links -->
       <div class="collapse navbar-collapse" id="mainNav">
         <ul class="navbar-nav mx-auto">
-          <li class="nav-item" href="#home">Home"><a class="nav-link</a></li>
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
           <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
-        <!-- CTA -->
         <a href="https://wa.me/9831218704" target="_blank" class="btn btn-outline-warning ms-lg-3">Contact Us</a>
       </div>
     </div>
   </nav>
 </header>
 
-<!-- Carousel -->
 <div id="duoviaCarousel" class="carousel slide carousel-fade container mt-4"
      data-bs-ride="carousel"
      data-bs-interval="4000"
@@ -148,7 +137,6 @@
   </button>
 </div>
 
-<!-- Info Cards -->
 <div class="container mt-5" id="services">
   <div class="row g-4">
     <div class="col-md-4" data-aos="fade-right">
@@ -175,7 +163,6 @@
   </div>
 </div>
 
-<!-- About -->
 <div class="py-5" id="about" data-aos="fade-up">
   <div class="container">
     <h3>About DuoVia</h3>
@@ -183,11 +170,38 @@
   </div>
 </div>
 
-<!-- Contact -->
 <div class="container py-5" id="contact" data-aos="fade-up">
   <h3>Contact Us</h3>
   <ul class="list-unstyled fs-5">
     <li><i class="bi bi-envelope"></i> Email: <a href="mailto:duoviaedutech@gmail.com">duoviaedutech@gmail.com</a></li>
     <li><i class="bi bi-whatsapp"></i> WhatsApp: <a href="https://wa.me/9831218704" target="_blank">Connect on WhatsApp</a></li>
     <li><i class="bi bi-facebook"></i> Facebook: <a href="https://facebook.com" target="_blank">Facebook Page</a></li>
-    <li><i class="bi bi-instagram"></i> Instagram: <a href="https://instagram.com" target="_blank">Instagram Profile</
+    <li><i class="bi bi-instagram"></i> Instagram: <a href="https://instagram.com" target="_blank">Instagram Profile</a></li>
+  </ul>
+</div>
+
+<footer class="text-center text-md-start py-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 mb-3 mb-md-0">
+        <h6>DuoVia EduTech</h6>
+        <p>Innovating education with AI.</p>
+      </div>
+      <div class="col-md-6 text-md-end">
+        <p class="mb-0">&copy; 2024 DuoVia EduTech. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,
+    once: true,
+    easing: 'ease-in-out'
+  });
+</script>
+</body>
+</html>
